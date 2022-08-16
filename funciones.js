@@ -34,7 +34,7 @@ function calcularIva() {
     console.table(resultado)
 }
 
-function generadorAutomatico() { 
+function generadorAutomatico() {
     productos.push(new Producto("BODEGAS LUIGI BOSCA", "DE SANGRE MALBEC D.O.C", 18069))
     productos.push(new Producto("BODEGAS LUIGI BOSCA", "LUIGI BOSCA MALBEC 750 CC", 10661))
     productos.push(new Producto("BODEGAS LUIGI BOSCA", "DE SANGRE CABERNET FRANC", 25245))
@@ -61,14 +61,41 @@ function generadorAutomatico() {
     productos.push(new Producto("BODEGAS BIANCHI", "OASIS SUR CABERNET SUAVIGNON", 933))
     productos.push(new Producto("BODEGAS BIANCHI", "GENESIS MALBEC", 868))
     productos.push(new Producto("BODEGAS BIANCHI", "MIL PIEDRAS MALBEC", 1074))
-} 
+}
 
 function buscarStock() {
     let prod = prompt("producto a buscar:").toUpperCase()
     const resultado = productos.filter(elemento => elemento.nombre.includes(prod))
     console.table(resultado)
-}  
+}
 
-function listadoProductos(){
+function listadoProductos() {
     console.table(productos)
+}
+
+function cargarTablaProductos() {
+    const cuerpo = document.getElementById("cuerpo")
+    productos.forEach(producto => {
+        cuerpo.innerHTML += `<tr>
+                                <td>${producto.indexOf}</td>
+                                <td>${producto.proveedor}</td>
+                                <td>${producto.nombre}</td>
+                                <td>${producto.importe}</td>
+                                <td>${producto.precioFinal()}</td>
+                            </tr>`
+    })
+}
+
+function cambiarIdioma(){
+    tituloNav.innerText = "STOCK MANAGEMENT"
+    tituloh2.innerText = "PRODUCT STOCK"
+    btnNav.innerText = "Search"
+    th1.innerText = "PROVIDER"
+    th2.innerText = "PRODUCT"
+    th3.innerText = "PRICE"
+    th4.innerText = "TOTAL COST"
+    btn1.innerText= "Add products"
+    btn2.innerText= "Remove products"
+    btn3.innerText= "Price with taxes"
+    btnIdioma.innerText = "Change Language"
 }

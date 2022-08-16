@@ -1,13 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-}
-body{
-    height: 100vh;
-}
-main{
-    background-color: #777777;
-    height: 100vh;
+    
 }
 
 /* TABLA DE DATOS */
@@ -21,11 +15,11 @@ th , td{
     border: solid 1px black;
     padding: 20px;
 }
-
 thead{
     background-color: #5e2129;
     border-bottom: solid 5px;
 }
+
 tr:nth-child(even){
     background-color: #ddd;
 }
@@ -37,4 +31,8 @@ tr:hover td{
 /* BOTONES */
 .botones{
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btnIdioma{
+    margin-top: 30px;
 }
