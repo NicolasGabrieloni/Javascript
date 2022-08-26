@@ -4,6 +4,29 @@
     
 }
 
+/* LOGIN */
+
+.login{
+    width: 500px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 150px auto;
+}
+.loginForm p {
+    font-size: 60px;
+    display: block;
+    background-color: #5e2129;
+    height: 140px;
+}
+.loginForm input {
+    margin: 40px;
+    font-size: 35px;
+}
+
+
+
+
+
 /* TABLA DE DATOS */
 .tablaDatos{
     background-color: white;

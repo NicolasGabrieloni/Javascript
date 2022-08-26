@@ -17,47 +17,35 @@
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" id="tituloNav">Gestion de STOCK</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" id="btnNav">Buscar</button>
-                </form>
+                <a class="navbar-brand" id="tituloNav">Gestor de stock - LOGIN</a>
             </div>
         </nav>
     </header>
 
     <main>
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary me-md-2 btn-secondary btnIdioma" id="btnIdioma" type="button">Cambiar
-                idioma</button>
+        <div class="login text-center">
+            <form method="post" class="loginForm">
+                <p><b>Ingresar</b></p>
+                <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                <br>
+                <br>
+                <input type="password" name="pass" id="password" placeholder="Contraseña">
+                <br>
+                <br>
+                <input type="button" name="" value="Ingresar" onclick="validarUsuario()">
+            </form>
+        </div>
+        <div class="login text-center">
+            <form method="post" class="loginForm">
+                <p><b>Registro</b></p>
+                <input type="text" value="" id="usuarioR" placeholder="Usuario">
+                <input type="text" value="" id="nombreR" placeholder="nombre">
+                <input type="password" value="" id="passwordR" placeholder="Contraseña">
+                <input type="button" name="" value="Registrarme" id="btnRegistro" onclick="guardarDatos()">
+            </form>
         </div>
 
-        <section>
-            <h2 class="titulo text-center" id="tituloh2">STOCK DE PRODUCTOS</h2>
-            <table class="tablaDatos">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th id="th1">PROVEEDOR</th>
-                        <th id="th2">PRODUCTO</th>
-                        <th id="th3">IMPORTE</th>
-                        <th id="th4">PRECIO FINAL</th>
-                    </tr>
-                </thead>
-                <tbody id="cuerpo">
-
-                </tbody>
-            </table>
-        </section>
-
-        <section class="botones">
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary btn-dark" type="button" id="btn3">Cargar tabla productos</button>
-                <button class="btn btn-primary btn-dark" type="button" id="btn1">Agregar productos</button>
-                <button class="btn btn-primary btn-dark" type="button" id="btn2">Quitar productos</button>
-            </div>
-        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

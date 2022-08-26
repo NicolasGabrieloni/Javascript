@@ -7,6 +7,7 @@ const botonQuitar = document.querySelector("#btn2")
 const botonTabla = document.querySelector("#btn3")
 const botonIdioma = document.querySelector("#btnIdioma")
 
+
 botonAgregar.addEventListener("click", ()=> {
     agregarProductos()
 })
@@ -18,4 +19,11 @@ botonTabla.addEventListener("click", ()=> {
 })
 botonIdioma.addEventListener("click", ()=> {
     cambiarIdioma()
+})
+
+
+const btnRegistro = document.querySelector("#btnRegistro").value;
+
+btnRegistro.addEventListener("click", ()=> {
+    guardarDatos()
 })

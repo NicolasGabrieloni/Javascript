@@ -86,7 +86,7 @@ function cargarTablaProductos() {
     })
 }
 
-function cambiarIdioma(){
+function cambiarIdioma() {
     tituloNav.innerText = "STOCK MANAGEMENT"
     tituloh2.innerText = "PRODUCT STOCK"
     btnNav.innerText = "Search"
@@ -94,8 +94,45 @@ function cambiarIdioma(){
     th2.innerText = "PRODUCT"
     th3.innerText = "PRICE"
     th4.innerText = "TOTAL COST"
-    btn1.innerText= "Add products"
-    btn2.innerText= "Remove products"
-    btn3.innerText= "Price with taxes"
+    btn1.innerText = "Add products"
+    btn2.innerText = "Remove products"
+    btn3.innerText = "Price with taxes"
     btnIdioma.innerText = "Change Language"
+}
+
+function validarUsuario() {
+    let usuario = document.getElementById("usuario").value;
+    let contraseña = document.getElementById("password").value;
+
+    if (usuario == "CuchuParedes" && contraseña == "123456") {
+        window.location = "stock.html";
+    }
+    else {
+        alert("usuario y contraseña incorrectas")
+    }
+}
+
+function guardarDatos() {
+    let usuarioR = document.querySelector("#usuarioR");
+    let nombreR = document.querySelector("#nombreR");
+    let passwordR = document.querySelector("#passwordR");
+
+    localStorage.setItem("usuarioR", usuarioR.value)
+    localStorage.setItem("nombreR", nombreR.value)
+    localStorage.setItem("paswordR", passwordR.value)
+
+    window.location = "stock.html";
+}
+
+function recuperarLS() {
+    usuarioR.value = localStorage.getItem("usuarioR")
+    nombreR.value = localStorage.gettItem("nombreR")
+    passwordR.value = localStorage.getItem("paswordR")
+}
+
+function nuevoUsuario() {
+    usuarioR.value = ""
+    nombreR.value = ""
+    passwordR.value = ""
+    window.location = "stock.html";
 }
