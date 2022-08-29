@@ -74,13 +74,14 @@ function listadoProductos() {
 }
 
 function cargarTablaProductos() {
+    generadorAutomatico()
     const cuerpo = document.getElementById("cuerpo")
     productos.forEach(producto => {
         cuerpo.innerHTML += `<tr>
                                 <td>${producto.indexOf}</td>
                                 <td>${producto.proveedor}</td>
                                 <td>${producto.nombre}</td>
-                                <td>${producto.importe}</td>
+                                <td>$ ${producto.importe}</td>
                                 <td>${producto.precioFinal()}</td>
                             </tr>`
     })
@@ -104,12 +105,7 @@ function validarUsuario() {
     let usuario = document.getElementById("usuario").value;
     let contraseña = document.getElementById("password").value;
 
-    if (usuario == "CuchuParedes" && contraseña == "123456") {
-        window.location = "stock.html";
-    }
-    else {
-        alert("usuario y contraseña incorrectas")
-    }
+    usuario == "CuchuParedes" && contraseña == "123456" ? window.location = "stock.html" : alert("usuario y contraseña incorrectas")
 }
 
 function guardarDatos() {
