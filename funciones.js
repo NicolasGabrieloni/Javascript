@@ -9,18 +9,49 @@ class Producto {
     }
 }
 
+
 function agregarProductos() {
-    let proveedor = prompt("proveedor:").toUpperCase()
-    let descripcion = prompt("producto:").toUpperCase()
-    let importe = parseInt(prompt("importe:"))
+    const formAddProd = document.getElementById("formAddProd")
+    formAddProd.innerHTML += `
+                                <input type="text" name="usuario" id="prov" placeholder="Proveedor">
+                                <br>
+                                <br>
+                                <input type="text" name="usuario" id="Descr" placeholder="Descripcion">
+                                <br>
+                                <br>
+                                <input type="text" name="usuario" id="Import" placeholder="Importe">
+                                <br>
+                                <input type="button" name="" value="Agregar" onclick="AddProd()">`
+}
+function AddProd() {
+    let proveedor = document.getElementById("prov").value;
+    let descripcion = document.getElementById("Descr").value;
+    let importe = document.getElementById("Import").value;
     productos.push(new Producto(proveedor, descripcion, importe))
+    Swal.fire({
+        title: 'Agregado!',
+        text: 'El producto fue agregado con exito',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
     console.table(productos)
 }
 
 function quitarProductos() {
-    let aQuitar = parseInt(prompt("Indice del producto a quitar:"))
-    productos.splice(aQuitar, 1)
-    alert("se elimino el producto seleccionado")
+    const formQuitProd = document.getElementById("formQuitProd")
+    formQuitProd.innerHTML += `
+                                <input type="text" name="usuario" id="prodQuit" placeholder="Indice del producto a quitar">
+                                <br>
+                                <input type="button" name="" value="Quitar" onclick="quitar()">`
+}
+function quitar() {
+    productos.splice(prodQuit, 1)
+    Swal.fire({
+        title: 'Eliminado!',
+        text: 'El producto fue eliminado con exito',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
 }
 
 function calcularIva() {
@@ -105,7 +136,12 @@ function validarUsuario() {
     let usuario = document.getElementById("usuario").value;
     let contraseña = document.getElementById("password").value;
 
-    usuario == "CuchuParedes" && contraseña == "123456" ? window.location = "stock.html" : alert("usuario y contraseña incorrectas")
+    usuario == "CuchuParedes" && contraseña == "123456" ? window.location = "stock.html" : Swal.fire({
+        title: 'Error!',
+        text: 'usuario y contraseña incorrectos',
+        icon: 'error',
+        confirmButtonText: 'Intentar nuevamente'
+      })
 }
 
 function guardarDatos() {
