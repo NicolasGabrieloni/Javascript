@@ -33,7 +33,7 @@ function AddProd() {
         text: 'El producto fue agregado con exito',
         icon: 'success',
         confirmButtonText: 'Cool'
-      })
+    })
     console.table(productos)
 }
 
@@ -51,7 +51,7 @@ function quitar() {
         text: 'El producto fue eliminado con exito',
         icon: 'success',
         confirmButtonText: 'Cool'
-      })
+    })
 }
 
 function calcularIva() {
@@ -110,9 +110,9 @@ function cargarTablaProductos() {
     productos.forEach(producto => {
         cuerpo.innerHTML += `<tr>
                                 <td>${producto.indexOf}</td>
-                                <td>${producto.proveedor}</td>
-                                <td>${producto.nombre}</td>
-                                <td>$ ${producto.importe}</td>
+                               <td>${producto.proveedor}</td>
+                               <td>${producto.nombre}</td>
+                               <td>$ ${producto.importe}</td>
                                 <td>${producto.precioFinal()}</td>
                             </tr>`
     })
@@ -141,7 +141,7 @@ function validarUsuario() {
         text: 'usuario y contraseña incorrectos',
         icon: 'error',
         confirmButtonText: 'Intentar nuevamente'
-      })
+    })
 }
 
 function guardarDatos() {
@@ -168,3 +168,31 @@ function nuevoUsuario() {
     passwordR.value = ""
     window.location = "stock.html";
 }
+
+function pedirdatosAlSv() {
+    fetch('https://jsonplaceholder.typicode.com/posts/')
+        .then((response) => response.json())
+        .then((json) => console.table(json));
+
+}
+
+function cargarDatosFetch() {
+let url = 'https://jsonplaceholder.typicode.com/posts/'
+    fetch(url)
+        .then((response) => response.json())
+        .then((cuerpo) => mostrarData(cuerpo))
+
+const mostrarData = (cuerpo) => {
+            console.log(cuerpo)
+            let body = ''
+            for (let i = 0; i<cuerpo.length; i++){
+                body += `<tr>
+                <td>${cuerpo[i].userId}</td>
+                <td>${cuerpo[i].id}</td>
+                <td>${cuerpo[i].title}</td>
+                <td>$ ${cuerpo[i].body}</td>
+            </tr>`
+            }
+            document.getElementById("cuerpo").innerHTML = body
+        }
+    }

@@ -27,3 +27,7 @@ const btnRegistro = document.querySelector("#btnRegistro").value;
 btnRegistro.addEventListener("click", ()=> {
     guardarDatos()
 })
+
+
+const arrayF = []
+const contenidoHtml = ""
