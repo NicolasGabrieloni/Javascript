@@ -1,0 +1,146 @@
+[
+    {
+        "Id": 1,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "DE SANGRE MALBEC D.O.C",
+        "Importe": 18069
+    },
+    {
+        "Id": 2,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "LUIGI BOSCA MALBEC 750 CC",
+        "Importe": 10661
+    },
+    {
+        "Id": 3,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "DE SANGRE CABERNET FRANC",
+        "Importe": 25245
+    },
+    {
+        "Id": 4,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "LUIGI BOSCA PINOT NOIR",
+        "Importe": 10657
+    },
+    {
+        "Id": 5,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "APUNTES MALBEC ORGANICO",
+        "Importe": 27155
+    },
+    {
+        "Id": 6,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "DE SANGRE RED BLEND",
+        "Importe": 21897
+    },
+    {
+        "Id": 7,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "LUIGI BOSCA CABERNET SUAVIGNON",
+        "Importe": 12538
+    },
+    {
+        "Id": 8,
+        "Proveedor": "BODEGAS LUIGI BOSCA",
+        "Producto": "DE SANGRE MALBEC",
+        "Importe": 20196
+    },
+    {
+        "Id": 9,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "NORTON MALBEC DOC",
+        "Importe": 1208
+    },
+    {
+        "Id": 10,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "NORTON RESERVA MALBEC",
+        "Importe": 1500
+    },
+    {
+        "Id": 11,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "NORTON ALTURA MALBEC",
+        "Importe": 2255
+    },
+    {
+        "Id": 12,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "LOTE LA COLONIA MALBEC SINGLE VINEYARD",
+        "Importe": 4264
+    },
+    {
+        "Id": 13,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "LOTE AGRELO MALBEC SINGLE VINEYARD",
+        "Importe": 4264
+    },
+    {
+        "Id": 14,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "PEDRIEL SERIES MALBEC",
+        "Importe": 2172
+    },
+    {
+        "Id": 15,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "NORTON RESERVA CABERNET SUAVIGNON",
+        "Importe": 1500
+    },
+    {
+        "Id": 16,
+        "Proveedor": "BODEGAS NORTON",
+        "Producto": "PEDRIEL SERIES CABERNET SUAVIGNON",
+        "Importe": 2172
+    },
+    {
+        "Id": 17,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "MALBEC ORGANICO",
+        "Importe": 1153
+    },
+    {
+        "Id": 18,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "FAMIGLIA BIANCHI CORTE UNICO",
+        "Importe": 1220
+    },
+    {
+        "Id": 19,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "SELECCION EXCLUSIVOS",
+        "Importe": 1308
+    },
+    {
+        "Id": 20,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "FAMIGLIA BIANCHI MALBEC",
+        "Importe": 1100
+    },
+    {
+        "Id": 21,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "OASIS SUR MALBEC",
+        "Importe": 993
+    },
+    {
+        "Id": 22,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "OASIS SUR CABERNET SUAVIGNON",
+        "Importe": 933
+    },
+    {
+        "Id": 23,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "GENESIS MALBEC",
+        "Importe": 868
+    },
+    {
+        "Id": 24,
+        "Proveedor": "BODEGAS BIANCHI",
+        "Producto": "MIL PIEDRAS MALBEC",
+        "Importe": 1074
+    }
+]

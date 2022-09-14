@@ -104,6 +104,7 @@ function listadoProductos() {
     console.table(productos)
 }
 
+
 function cargarTablaProductos() {
     generadorAutomatico()
     const cuerpo = document.getElementById("cuerpo")
@@ -170,29 +171,31 @@ function nuevoUsuario() {
 }
 
 function pedirdatosAlSv() {
-    fetch('https://jsonplaceholder.typicode.com/posts/')
+    fetch('productos.json')
         .then((response) => response.json())
         .then((json) => console.table(json));
 
 }
 
-function cargarDatosFetch() {
-let url = 'https://jsonplaceholder.typicode.com/posts/'
-    fetch(url)
-        .then((response) => response.json())
-        .then((cuerpo) => mostrarData(cuerpo))
 
-const mostrarData = (cuerpo) => {
-            console.log(cuerpo)
-            let body = ''
-            for (let i = 0; i<cuerpo.length; i++){
-                body += `<tr>
-                <td>${cuerpo[i].userId}</td>
-                <td>${cuerpo[i].id}</td>
-                <td>${cuerpo[i].title}</td>
-                <td>$ ${cuerpo[i].body}</td>
-            </tr>`
-            }
-            document.getElementById("cuerpo").innerHTML = body
-        }
-    }
+const cargarContenido = async () => {
+    await fetch('productos.json')
+        .then((response) => response.json())
+        .then((data)=> {
+            pf = data
+            pf.forEach(contenido => {
+                contenidoHtml += mostrarData(contenido)
+            });
+            cuerpo.innerHTML = contenidoHtml
+        })
+}
+
+const mostrarData = (contenido) => {
+    return `<tr>
+                 <td>${contenido.Id}</td>
+                 <td>${contenido.Proveedor}</td>
+                 <td>${contenido.Producto}</td>
+                 <td>$${contenido.Importe}</td>
+                 <td>$${(contenido.Importe*IVA).toFixed(2)}</td>
+             </tr>`
+}

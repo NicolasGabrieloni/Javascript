@@ -6,7 +6,9 @@ const botonAgregar = document.querySelector("#btn1")
 const botonQuitar = document.querySelector("#btn2")
 const botonTabla = document.querySelector("#btn3")
 const botonIdioma = document.querySelector("#btnIdioma")
-
+const URL = "productos.json"
+    let pf = []
+    let contenidoHtml = ""
 
 botonAgregar.addEventListener("click", ()=> {
     agregarProductos()
@@ -15,19 +17,16 @@ botonQuitar.addEventListener("click", ()=> {
     quitarProductos()
 })
 botonTabla.addEventListener("click", ()=> {
-    cargarTablaProductos()
+    cargarContenido()
 })
 botonIdioma.addEventListener("click", ()=> {
     cambiarIdioma()
 })
 
-
 const btnRegistro = document.querySelector("#btnRegistro").value;
-
 btnRegistro.addEventListener("click", ()=> {
     guardarDatos()
 })
 
 
 const arrayF = []
-const contenidoHtml = ""
