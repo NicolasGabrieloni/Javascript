@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(./img/wallpaperbetter.com_7680x4320.jpg);
+    background-image: url(./img/cara-feliz-con-falla_3840x2160_xtrafondos.com.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: fixed;
@@ -69,4 +69,14 @@ tr:hover td{
 }
 .btnIdioma{
     margin-top: 30px;
+}
+.btnSesion{
+    margin-top: 30px;
+}
+.btnSesion a {
+    text-decoration: none;
+    color: white;
+}
+.btnSesion a:hover{
+    color: white;
 }
